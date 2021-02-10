@@ -15,6 +15,7 @@ TARGET=xtensa-esp32-none-elf
 CLANG_FLAGS="\
     --sysroot=$SYSROOT \
     -Ibuild/include/ \
+    -I$SYSROOT/include/ \
     -D__bindgen \
     --target=$TARGET \
     -x c"
@@ -31,7 +32,9 @@ CLANG_FLAGS="${CLANG_FLAGS} \
     -I$COMPS/lwip/include/apps/sntp \
     -I$COMPS/lwip/lwip/src/include \
     -I$COMPS/lwip/port/esp32/include \
-    -I$COMPS/newlib/platform_include"
+    -I$COMPS/newlib/platform_include \
+    -I$COMPS/soc/src/esp32/include \
+    -I$COMPS/soc/soc/esp32/include"
 
 generate_bindings()
 {

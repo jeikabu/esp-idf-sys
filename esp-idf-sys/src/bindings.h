@@ -16,6 +16,7 @@
 #include "driver/uart.h"
 #include <esp32/clk.h>
 
+#include <esp_task_wdt.h>
 #include <esp_sleep.h>
 #include <esp_wifi.h>
 #include <esp_websocket_client.h>
